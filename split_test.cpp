@@ -14,8 +14,10 @@ int main(){
 	Node* odds = nullptr;
 
 	split(in, odds, evens);
+	//expected: both addresses to be the same
 	std::cout << odds << " " << node1 << std::endl;
 
+	// expected: 1 3 5
 	while(odds != nullptr) {
 		std::cout << odds->value << " ";
 		odds = odds->next;
@@ -23,6 +25,7 @@ int main(){
 
 	std::cout << std::endl;
 	
+	//expected: 2 4
 	while(evens != nullptr) {
 		std::cout << evens->value << " ";
 		evens = evens->next;
